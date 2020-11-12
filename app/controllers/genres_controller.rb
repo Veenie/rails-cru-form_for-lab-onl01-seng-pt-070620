@@ -20,7 +20,7 @@ class GenresController < ApplicationController
   end
 
   def index
-    @genre = Genre.all
+    @genres = Genre.all
   end
 
   def show
