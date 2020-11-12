@@ -7,7 +7,7 @@ class ArtistsController < ApplicationController
   end
   
   def new
-    @artist = Artist.find(params[:id])
+    @artist = Artist.new
   end
 
   def edit
@@ -21,7 +21,7 @@ class ArtistsController < ApplicationController
   end
 
   def index
-    @artist = Artist.all
+    @artists = Artist.all
   end
 
   def show
