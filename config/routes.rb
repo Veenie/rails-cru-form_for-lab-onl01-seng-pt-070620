@@ -1,33 +1,36 @@
 Rails.application.routes.draw do
-  get 'songs/new'
+  resources :songs, only: [:index, :show, :new, :create, :edit, :update]
+  resources :genres, only: [:index, :show, :new, :create, :edit, :update]
+  resources :artists, only: [:index, :show, :new, :create, :edit, :update]
+  # get 'songs/new'
 
-  get 'songs/create'
+  # get 'songs/create'
 
-  get 'songs/edit'
+  # get 'songs/edit'
 
-  get 'songs/update'
+  # get 'songs/update'
 
-  get 'songs/index'
+  # get 'songs/index'
 
-  get 'genres/new'
+  # get 'genres/new'
 
-  get 'genres/create'
+  # get 'genres/create'
 
-  get 'genres/edit'
+  # get 'genres/edit'
 
-  get 'genres/update'
+  # get 'genres/update'
 
-  get 'genres/index'
+  # get 'genres/index'
 
-  get 'artists/new'
+  # get 'artist/new'
 
-  get 'artists/create'
+  # get 'artist/create'
 
-  get 'artists/edit'
+  # get 'artist/edit'
 
-  get 'artists/update'
+  # get 'artist/update'
 
-  get 'artists/index'
+  # get 'artists/index'
   
   get 'artists/:id', to: 'artists#show'
   get 'songs/:id', to: 'songs#show'
